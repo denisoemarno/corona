@@ -26,7 +26,7 @@ function http_request($url){
 
 }
 // panggil fungsi http_request
-$data = http_request("https://indonesia-covid-19.mathdro.id/api/provinsi/");
+$data = http_request("https://api.kawalcorona.com/indonesia/provinsi/");
 
 //ubah data ke format json
 $data = json_decode($data,TRUE);
