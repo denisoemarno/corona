@@ -1,0 +1,13 @@
+version: 2
+
+services:
+    php:
+        build: ./docker/php
+        volumes: 
+            - ./:/var/www/html
+            - ./var/log/apache2/corona:/var/log/apache2/
+        ports: 
+            - '8000:80'
+        environment: 
+            - VIRTUAL_HOST=corna.densu.com
+        
