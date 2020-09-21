@@ -1,9 +1,12 @@
-FROM php:7.1.8-apache
+FROM php:5.6.apache
+RUN apt-get update && apt-get install -y
 
-MAINTAINER Paul Redmond
+COPY ./corona.densu.com.conf  /etc/apache2/sites-available/
+COPY ./host /etc/hosts
+RUN a2enmod rewrite
 
-COPY . /srv/app
-COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
+RUN service apache2 restart
+WORKDIR /etc/apache2/sites-available/
+RUN a2ensite corona.densu.com.conf
 
-RUN chown -R www-data:www-data /srv/app \
-    && a2enmod rewrite
+EXPOSE 80
