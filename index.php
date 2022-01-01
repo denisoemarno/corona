@@ -111,7 +111,7 @@
           </div>
         </div>
         <!-- raw -->
-        <div class="card mt-3">
+        <!-- <div class="card mt-3">
           <div class="card-header bg-danger text-white">
             <b>Data kasus Corona Di Indonesia Berdasarkan Provinsi</b>
           </div>
@@ -131,7 +131,7 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div> -->
       </div>
       <!--container  -->
       <footer class="bg-primary text-white text-center mt-3 pt-2 pb-2">
